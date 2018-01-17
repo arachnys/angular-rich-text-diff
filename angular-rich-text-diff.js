@@ -1,5 +1,4 @@
-/// <reference path="bower_components/dt-angular/angular.d.ts"/>
-/// <reference path="google-diff-match-patch.d.ts"/>
+var DiffMatchPatch = require('diff-match-patch');
 var AngularRichTextDiff;
 (function (AngularRichTextDiff) {
     'use strict';
@@ -18,7 +17,7 @@ var AngularRichTextDiff;
             this.tagMap['&nbsp;'] = unicodeCharacter;
             this.tagMap[unicodeCharacter] = '&nbsp;';
             this.mapLength++;
-            this.dmp = new diff_match_patch();
+            this.dmp = new DiffMatchPatch();
             this.doDiff();
         }
         RichTextDiffController.prototype.doDiff = function () {
