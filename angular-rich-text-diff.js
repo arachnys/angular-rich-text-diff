@@ -1,5 +1,3 @@
-/// <reference path="bower_components/dt-angular/angular.d.ts"/>
-/// <reference path="google-diff-match-patch.d.ts"/>
 var DiffMatchPatch = require('diff-match-patch');
 var AngularRichTextDiff;
 (function (AngularRichTextDiff) {
